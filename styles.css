@@ -1,0 +1,170 @@
+/* ========== Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Variabler ========== */
+:root {
+  --color-primary: #8AA499;
+  --color-accent: #CADED3;
+  --color-accent-2: #D2C49F;
+  --color-background: #ECECEC;
+  --color-secondary: #E8DDCA;
+  --color-cta: #3C6255;
+  --color-text: #040404;
+  --color-text-cta: #FCFCFC;
+}
+
+
+/* ========== Basis ========== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========== Header Mobil First ========== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 1rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.burger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-icons button {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-links a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+  border-top: 1px solid var(--color-text);
+}
+
+/* ========== Hero ========== */
+.hero {
+  text-align: left;
+  padding: 2rem 1rem;
+  color: var(--color-text);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: var(--color-cta);
+  color: var(--color-text-cta);
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ========== Gavekurve ========== */
+.gift-boxes h2 {
+  margin-bottom: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.gift-card {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-background);
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ========== Footer ========== */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  text-align: left;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========== Desktop Layout ========== */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .logo {
+    flex-grow: 0;
+    text-align: left;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    position: static;
+    background: none;
+    width: auto;
+  }
+
+  .nav-links a {
+    border: none;
+    padding: 0;
+    color: var(--color-text);
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+}
