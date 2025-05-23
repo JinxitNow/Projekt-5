@@ -129,14 +129,88 @@ body {
   font-size: 1rem;
 }
 
-/* ========== Footer ========== */
 .footer {
   background-color: var(--color-primary);
+  padding: 2rem 1rem;
   color: var(--color-text);
-  text-align: left;
-  padding: 1rem;
-  margin-top: 2rem;
 }
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__heading {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.footer__text,
+.footer__link {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__icons,
+.footer__payments {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer__icon,
+.footer__payment-icon {
+  width: 24px;
+  height: auto;
+}
+
+/* 💻 Desktop layout */
+@media (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer__section {
+    flex: 1 1 22%;
+    min-width: 160px;
+  }
+
+  .footer__section--social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer__payments {
+    margin-top: 1rem;
+  }
+}
+
+
 
 /* ========== Desktop Layout ========== */
 @media (min-width: 768px) {
