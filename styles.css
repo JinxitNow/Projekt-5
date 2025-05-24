@@ -85,6 +85,33 @@ body {
   border-top: 1px solid var(--color-text);
 }
 
+/*Når menuen er aktiv */
+.nav-links.active {
+  display: flex;
+}
+
+/*Når menuen er aktiv på mobil*/
+.burger {
+  display: block;
+}
+
+/*Visning på desktop*/
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  
+  .nav-links a {
+    border-top: none;
+  }
+}
+
 /* ========== Hero ========== */
 .hero {
   text-align: left;
