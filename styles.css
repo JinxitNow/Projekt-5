@@ -43,12 +43,13 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin: 0 2rem;
 }
 
 .nav-links {
+  font-size: 1.5rem;
   display: none;
   flex-direction: column;
   position: absolute;
@@ -58,7 +59,9 @@ body {
   background-color: var(--color-text);
   z-index: 1;
   text-align: center;
+  gap: 10rem;
 }
+
 
 .nav-links a {
   padding: 1rem;
@@ -70,11 +73,11 @@ body {
 /* Når menuen er aktiv */
 .nav-links.active {
   display: flex;
-}
+ }
 
 .header-icons {
   display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
   margin-left: auto;
 }
 
