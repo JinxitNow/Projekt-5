@@ -31,6 +31,17 @@ body {
   margin: auto;
 }
 
+
+/*========Topbanner=======*/
+.top-banner {
+  background-color: #CADED3;
+  color: #040404;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* ========== Header Mobil First ========== */
 .header {
   display: flex;
@@ -73,7 +84,8 @@ body {
 /* Når menuen er aktiv */
 .nav-links.active {
   display: flex;
- }
+ 
+}
 
 .header-icons {
   display: flex;
@@ -85,7 +97,7 @@ body {
   background: none;
   border: none;
   color: var(--color-text);
-  font-size: 1.2rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
