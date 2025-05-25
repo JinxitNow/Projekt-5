@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const reopenBtn = document.getElementById("reopenPopup");
   const form = document.getElementById("newsletterForm");
 
-    setTimeout(function () {
+  // Vis popup efter 30 sekunder
+  setTimeout(function () {
     popup.style.display = "flex";
-    }, 30000);
+  }, 10000); // 10000 millisekunder = 10 sekunder
 
   // Luk popup
   closeBtn.addEventListener("click", function () {
@@ -20,14 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
     reopenBtn.classList.add("hidden");
   });
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  // Fake formular
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
 
-  if (name && email) {
-    form.innerHTML = "<p>Tak for din tilmelding! Du vil få din rabatkode per mail</p>";
-  }
-});
+    if (name && email) {
+      form.innerHTML = "<p>Tak for din tilmelding! Du vil få din rabatkode per mail</p>";
+    }
   });
+});
+
