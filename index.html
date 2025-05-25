@@ -39,6 +39,28 @@
     <p>Kunsthåndværk, interiør og delikatesser</p>
     <a href="#" class="btn">Virtuel rundtur</a>
   </section>
+   
+   <!-- popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <button id="closeBtn" class="close-btn">&times;</button>
+      <img src="placeholder.jpg" alt="Gavekurv" class="popup-image" />
+      <div class="popup-text">
+        <h2>LIWIRA</h2>
+        <p class="headline">Få nu <span class="highlight">20%</span> på dit første køb!</p>
+        <p class="subtext">Tilmeld dig vores nyhedsbrev og få 20% på dit første køb</p>
+        <form id="newsletterForm">
+          <input type="text" id="name" placeholder="Skriv dit navn" required />
+          <input type="email" id="email" placeholder="Skriv din email" required />
+          <button type="submit">Tilmeld dig og få 20% på dit første køb</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button id="reopenPopup" class="reopen-btn hidden">Åbn popup igen</button>
+
+  <script src="popup.js"></script>
 
   <!-- Gavekurve bokse -->
   <section class="gift-boxes container">
