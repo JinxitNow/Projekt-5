@@ -96,6 +96,11 @@ body {
   margin-left: auto;
 }
 
+.header-icons img {
+  width: 32px;
+  height: 32px;
+}
+
 .header-icons button {
   background: none;
   border: none;
