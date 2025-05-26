@@ -47,53 +47,26 @@ body {
 
 /* ========== Header Mobil First ========== */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 1rem;
-  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 2rem;
-}
-
-.nav-links {
-  font-size: 1.5rem;
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-text);
-  z-index: 1;
-  text-align: center;
-  gap: 10rem;
-}
-
-
-.nav-links a {
-  padding: 1rem;
-  text-decoration: none;
-  color: var(--color-text);
-  border-top: 1px solid var(--color-text);
-}
-
-/* Når menuen er aktiv */
-.nav-links.active {
-  display: flex;
- 
 }
 
 .header-icons {
   display: flex;
-  gap: 2rem;
-  margin-left: auto;
+  gap: 3rem;
 }
 
 .header-icons img {
@@ -104,12 +77,45 @@ body {
 .header-icons button {
   background: none;
   border: none;
-  color: var(--color-text);
-  font-size: 2rem;
   cursor: pointer;
 }
 
+
+.burger {
+  cursor: pointer;
+}
+
+.burger img {
+  width: 32px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-text);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-primary);
+  padding: 1rem;
+  border-top: 1px solid var(--color-primary);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* === Desktop (≥768px) === */
 @media screen and (min-width: 768px) {
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .burger {
     display: none;
   }
@@ -118,32 +124,30 @@ body {
     display: flex !important;
     flex-direction: row;
     position: static;
-    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 0;
     gap: 2rem;
-    margin: 0 auto;
+    flex: 1;
   }
 
   .nav-links a {
-    border: none;
     color: var(--color-text);
-  }
-
-  .header {
-    justify-content: space-between;
-  }
-
-  .logo {
-    order: 1;
-  }
-
-  .nav-links {
-    order: 2;
+    border: none;
   }
 
   .header-icons {
     order: 3;
+    gap: 2rem;
+  }
+
+  .logo {
+    font-size: 3.5rem;
   }
 }
+
+
 
 
 /* ========== Hero ========== */
