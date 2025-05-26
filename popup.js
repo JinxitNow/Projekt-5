@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Vis popup efter 30 sekunder
   setTimeout(function () {
     popup.style.display = "flex";
-  }, 10000); // 10000 millisekunder = 10 sekunder
+  }, 5000); // 5000 millisekunder = 5 sekunder
 
   // Luk popup
   closeBtn.addEventListener("click", function () {
