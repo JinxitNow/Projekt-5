@@ -333,6 +333,7 @@ body {
   }
 }
 
+/* Footer */
 
 .footer {
   background-color: var(--color-primary);
@@ -391,6 +392,63 @@ body {
   height: auto;
 }
 
+/* Footer tid (Christoffer) */
+
+.footer__clock-box {
+  color: #fff;
+  background-color: #8AA499;
+  width: 100%;
+  padding: 1rem;
+  border: 3px solid #D2C49F;
+  border-radius: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  transition: background 0.5s, box-shadow 0.5s;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.footer__clock-box:hover {
+  background: #D2C49F;
+  box-shadow: 0 0 1rem #D2C49F;
+}
+
+.footer__clock-date {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.footer__clock-time {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__clock-time span {
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+.footer__clock-time span:last-child {
+  background: #8AA499;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.footer__clock-greeting {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+
 /* 💻 Desktop layout */
 @media (min-width: 768px) {
   .footer__container {
@@ -415,38 +473,24 @@ body {
   }
 }
 
+/* Footer tid responsiv (Christoffer) */
 
-
-/* ========== Desktop Layout ========== */
 @media (min-width: 768px) {
-  .burger {
-    display: none;
+  .footer__clock-box {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .logo {
-    flex-grow: 0;
-    text-align: left;
+  .footer__clock-time {
+    font-size: 2.5rem;
   }
 
-  .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    gap: 2rem;
-    position: static;
-    background: none;
-    width: auto;
-  }
-
-  .nav-links a {
-    border: none;
-    padding: 0;
-    color: var(--color-text);
-  }
-
-  .header {
-    justify-content: space-between;
+  .footer__clock-time span:last-child {
+    font-size: 1.2rem;
   }
 }
+
 
 /* Popup*/
 .popup {

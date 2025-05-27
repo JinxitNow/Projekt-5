@@ -147,6 +147,24 @@
 
     <div class="footer__section footer__section--aabningstider">
       <h3 class="footer__heading">Åbningstider</h3>
+      <div class="footer__clock" onload="initClock()">
+  <div class="footer__clock-box">
+    <div class="footer__clock-date">
+      <span id="dag">Dag</span>,
+      <span id="måned">Måned</span>,
+      <span id="dagnum">00</span>,
+      <span id="år">År</span>
+    </div>
+    <div class="footer__clock-time">
+      <span id="time">00</span>:
+      <span id="minutter">00</span>:
+      <span id="sekunder">00</span>
+    </div>
+    <div class="footer__clock-greeting">
+      <span id="hilsen">Godmorgen</span>
+    </div>
+  </div>
+</div>
       <p class="footer__text">Mandag–fredag<br>
       kl. 11.00–17.00<br>
       Lørdag kl. 10.00–12.00<br>
@@ -182,6 +200,11 @@
     </div>
 
   </div>
+
+  <script src="tid.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", initClock);
+</script>
 </footer>
 
     <script src="header.js"></script>
