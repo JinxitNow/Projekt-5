@@ -26,10 +26,10 @@ function updateClock(){
         if((dname > 0 && dname < 6 && hou > 10 && hou < 17) ||
             (dname == 6 && hou > 9 && hou < 12)
         ){
-            åben.firstChild.nodeValue = "Åben"
+            åben.firstChild.nodeValue = "Vi har åben"
         }
         else{
-             åben.firstChild.nodeValue = "Lukket"
+             åben.firstChild.nodeValue = "Vi har lukket"
         }
         
 }
