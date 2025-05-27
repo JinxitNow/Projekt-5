@@ -48,7 +48,6 @@ body {
 /* ========== Header Mobil First ========== */
 .header {
   background-color: var(--color-primary);
-  color: var(--color-text);
   padding: 1rem;
 }
 
@@ -56,22 +55,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  position: relative;
 }
 
 .logo {
   font-size: 2.5rem;
   font-weight: bold;
+  color: var(--color-text);
 }
 
 .header-icons {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .header-icons img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 .header-icons button {
@@ -80,8 +81,11 @@ body {
   cursor: pointer;
 }
 
-
+/* Burger menu (kun synlig på mobil) */
 .burger {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
   cursor: pointer;
 }
 
@@ -89,66 +93,86 @@ body {
   width: 32px;
 }
 
+/* ========== Mobil: Dropdownmenu ========== */
 .nav-links {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background-color: var(--color-text);
+  color: var(--color-primary);
   display: none;
   flex-direction: column;
-  width: 100%;
-  background-color: var(--color-text);
-  text-align: center;
-  padding: 1rem 0;
+  width: 200px;
+  text-align: left;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .nav-links a {
-  text-decoration: none;
   color: var(--color-primary);
+  text-decoration: none;
   padding: 1rem;
   border-top: 1px solid var(--color-primary);
+  display: block;
 }
 
+/* Når menuen er aktiv */
 .nav-links.active {
   display: flex;
+  max-height: 400px;
+  opacity: 1;
 }
 
-/* === Desktop (≥768px) === */
-@media screen and (min-width: 768px) {
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-  }
 
+/* ========== Desktop-visning ========== */
+@media screen and (min-width: 768px) {
   .burger {
     display: none;
   }
 
+  .header-top {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 3rem;
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  @media screen and (min-width: 768px) {
   .nav-links {
-    display: flex !important;
-    flex-direction: row;
     position: static;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background: transparent;
     padding: 0;
     gap: 2rem;
-    flex: 1;
+    opacity: 1;
+    max-height: none;
+    width: auto;
+    box-shadow: none;
   }
 
   .nav-links a {
     color: var(--color-text);
     border: none;
-  }
-
-  .header-icons {
-    order: 3;
-    gap: 2rem;
-  }
-
-  .logo {
-    font-size: 3.5rem;
+    font-weight: 500;
   }
 }
-
-
-
+  .header-icons {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
 
 /* ========== Hero ========== */
 .hero-section {
