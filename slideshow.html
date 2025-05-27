@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karusel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="carousel-container">
+    <button class="nav left" onclick="prevSlide()">&#60;</button>
+    
+    <div class="carousel-slide active">
+      <div class="card">
+        <div class="text">
+          <h2>Lena Fischer Keramik</h2>
+          <p>Oplev historien om Lena Fischer, grafikeren der fandt sin passion i at dreje lavaler til håndlavede kopper med glimtende krystalglasur.</p>
+          <p>Fra gårdliv på Hindsholm til et lille værksted fyldt med magi – hendes unika taler for sig selv.</p>
+          <button class="read-more">LÆS MERE</button>
+        </div>
+        <div class="image">
+          <img src="keramik.jpg" alt="Lena Fischer Keramik" />
+        </div>
+      </div>
+    </div>
+
+    <button class="nav right" onclick="nextSlide()">&#62;</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+    <span class="dot" onclick="goToSlide(4)"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
