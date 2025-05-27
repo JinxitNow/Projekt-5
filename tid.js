@@ -4,10 +4,9 @@ function updateClock(){
     let dname = now.getDay();
         mo = now.getMonth();
         dnum = now.getDate();
-        yr = now.getFullYear();
         hou = now.getHours();
         min = now.getMinutes();
-        sec = now.getSeconds();
+        
 
     
         if(hou > 24){
@@ -18,30 +17,21 @@ function updateClock(){
     
         const months = ["Januar", "Februar", "Marts", "April", "Maj", "Juni", "Juli", "August", "September", "oktober", "November", "December"]
         const week = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]
-        const ids = ["dag", "måned", "dagnum", "år", "time", "minutter", "sekunder"]
-        let values = [week[dname], months[mo], dnum, yr, hou.toString().padStart(2, 0), min.toString().padStart(2, 0), sec.toString().padStart(2, 0)]
+        const ids = ["dag", "måned", "dagnum", "time", "minutter"]
+        let values = [week[dname], months[mo], dnum, hou.toString().padStart(2, 0), min.toString().padStart(2, 0)]
         for(let i = 0; i < ids.length; i++){
             document.getElementById(ids[i]).firstChild.nodeValue = values[i];
         }
-        let hilsen = document.getElementById("hilsen");
-        if(hou < 6){
-            hilsen.firstChild.nodeValue = "Godnat"
+        let åben = document.getElementById("åben");
+        if((dname > 0 && dname < 6 && hou > 10 && hou < 17) ||
+            (dname == 6 && hou > 9 && hou < 12)
+        ){
+            åben.firstChild.nodeValue = "Åben"
         }
-        else if(hou < 9){
-            hilsen.firstChild.nodeValue = "Godmorgen"
+        else{
+             åben.firstChild.nodeValue = "Lukket"
         }
-        else if(hou < 12){
-            hilsen.firstChild.nodeValue = "Godformiddag"
-        }
-        else if(hou < 15){
-            hilsen.firstChild.nodeValue = "Godmiddag"
-        }
-        else if(hou < 18){
-            hilsen.firstChild.nodeValue = "Godeftermiddag"
-        }
-        else if(hou < 24){
-            hilsen.firstChild.nodeValue = "Godaften"
-        }
+        
 }
 
 function initClock(){
