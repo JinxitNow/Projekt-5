@@ -422,11 +422,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-primary);
   width: 100%;
-  border-radius: 0.5rem;
   font-family: "Roboto", sans-serif;
   transition: background 0.5s, box-shadow 0.5s;
   margin-bottom: 1rem;
   box-sizing: border-box;
+  margin-top: 1rem;
 }
 
 .footer__clock-date {
@@ -494,8 +494,6 @@ body {
 @media (min-width: 768px) {
   .footer__clock-box {
     max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .footer__clock-time {
