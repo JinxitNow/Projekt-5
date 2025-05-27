@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Objekt-menu
+  // Objektbaseret menu
   const menuItems = [
     { text: "Gavekurve", href: "#" },
     { text: "Sortiment", href: "#" },
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   burgerMenu.addEventListener("click", toggleMenu);
 
-  // Klik udenfor burgermenu - lukker menu
+  // Klik udenfor lukker menu
   document.addEventListener("click", function (e) {
     if (!navLinks.contains(e.target) && !burgerMenu.contains(e.target)) {
       navLinks.classList.remove("active");
