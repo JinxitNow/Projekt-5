@@ -739,6 +739,9 @@ button[type="submit"]:hover {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 
 }
 .right {
