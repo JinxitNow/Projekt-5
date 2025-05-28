@@ -59,24 +59,25 @@
    
    <!-- popup -->
   <div id="popup" class="popup">
-    <div class="popup-content">
-      <button id="closeBtn" class="close-btn">&times;</button>
-      <img src="img/popupgiftbasket.webp" alt="Gavekurv" class="popup-image" />
-      <div class="popup-text">
-        <h2>LIWIRA</h2>
-        <p class="headline">Få nu <span class="highlight">20%</span> på dit første køb!</p>
-        <p class="subtext">Tilmeld dig vores nyhedsbrev og få 20% på dit første køb</p>
-        <form id="newsletterForm">
-          <input type="text" id="name" placeholder="Skriv dit navn" required />
-          <input type="email" id="email" placeholder="Skriv din email" required />
-          <button type="submit">Tilmeld dig og få 20% på dit første køb</button>
-        </form>
-      </div>
+  <div class="popup__content">
+    <button id="closeBtn" class="popup__close-btn">&times;</button>
+    <img src="img/popupgiftbasket.webp" alt="Gavekurv" class="popup__image" />
+    <div class="popup__text">
+      <h2>LIWIRA</h2>
+      <p class="popup__headline">Få nu <span class="popup__highlight">20%</span> på dit første køb!</p>
+      <p class="popup__subtext">Tilmeld dig vores nyhedsbrev og få 20% på dit første køb</p>
+      <form id="newsletterForm" class="popup__form">
+        <input type="text" id="name" class="popup__input" placeholder="Skriv dit navn" required />
+        <input type="email" id="email" class="popup__input" placeholder="Skriv din email" required />
+        <button type="submit" class="popup__submit-btn">Tilmeld dig og få 20% på dit første køb</button>
+      </form>
     </div>
-      <script src="popup.js"></script>
   </div>
+  <script src="popup.js"></script>
+</div>
 
-  <button id="reopenPopup" class="reopen-btn hidden">20% rabat</button>
+<button id="reopenPopup" class="popup__reopen-btn hidden">20% rabat</button>
+
 
    <!-- Gavekurve bokse -->
  <section class="gift-section">
@@ -119,8 +120,6 @@
 </section>
 
 <!-- Slideshow -->
-   
-
     <div class="slideshow-container"> 
       <script src="slideshow.js" defer></script>
 <a class="prev" onclick="plusSlides(-1)">❮</a>

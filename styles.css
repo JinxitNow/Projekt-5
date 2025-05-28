@@ -181,6 +181,7 @@ body {
   gap: 2rem;
   padding: 2rem;
   background-color: var(--color-background);
+  margin-bottom: 60px;
 }
 
 .hero-section__image {
@@ -259,6 +260,7 @@ body {
   padding: 2rem;
   background-color: var(--color-secondary);
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .gift-section__title {
@@ -266,12 +268,14 @@ body {
   font-weight: bold;
   color: var(--color-text);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .gift-section__subtitle {
   font-size: 0.95rem;
   color: var(--color-text);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .gift-section__cards {
@@ -565,7 +569,7 @@ body {
   z-index: 1000;
 }
 
-.popup-content {
+.popup__content {
   background-color: var(--color-background);
   border-radius: 10px;
   max-width: 90vw;
@@ -578,41 +582,40 @@ body {
   align-items: center;
 }
 
-.popup-image {
+.popup__image {
   width: 100%;
   max-height: 200px;
   object-fit: contain;
   border-radius: 10px;
 }
 
-.popup-text {
+.popup__text {
   text-align: center;
   margin-top: 1rem;
 }
 
-.popup-text h2 {
+.popup__text h2 {
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
-.headline {
+.popup__headline {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   font-weight: bold;
 }
 
-.highlight {
+.popup__highlight {
   color: var(--color-cta);
 }
 
-.subtext {
+.popup__subtext {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-input[type="text"],
-input[type="email"] {
+.popup__input {
   width: 100%;
   padding: 0.7rem;
   margin: 0.5rem 0;
@@ -621,7 +624,7 @@ input[type="email"] {
   box-sizing: border-box;
 }
 
-button[type="submit"] {
+.popup__submit-btn {
   background-color: var(--color-cta);
   color: var(--color-text-cta);
   padding: 0.8rem;
@@ -632,11 +635,11 @@ button[type="submit"] {
   font-weight: bold;
 }
 
-button[type="submit"]:hover {
+.popup__submit-btn:hover {
   background-color: var(--color-cta);
 }
 
-.close-btn {
+.popup__close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -646,7 +649,7 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-.reopen-btn {
+.popup__reopen-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -663,25 +666,26 @@ button[type="submit"]:hover {
   display: none;
 }
 
-/* Desktop visning*/
+/* Desktop visning */
 @media (min-width: 768px) {
-  .popup-content {
+  .popup__content {
     flex-direction: row;
     max-width: 700px;
   }
 
-  .popup-image {
+  .popup__image {
     width: 50%;
     max-height: 100%;
     object-fit: contain;
     border-radius: 10px 0 0 10px;
   }
 
-  .popup-text {
+  .popup__text {
     width: 50%;
     padding: 1rem;
   }
-} 
+}
+
 
 /* ========== Slideshow (Nicoline) ========== */
 .slideshow-container{
