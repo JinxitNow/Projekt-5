@@ -4,10 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const reopenBtn = document.getElementById("reopenPopup");
   const form = document.getElementById("newsletterForm");
 
-  // Vis popup efter 30 sekunder
+  // Simulerede tilmeldte e-mails
+  const registeredEmails = ["test@example.com", "hello@liwira.dk"];
+
+  // Vis popup efter 5 sekunder
   setTimeout(function () {
     popup.style.display = "flex";
-  }, 5000); // 5000 millisekunder = 5 sekunder
+  }, 5000);
 
   // Luk popup
   closeBtn.addEventListener("click", function () {
@@ -21,16 +24,25 @@ document.addEventListener("DOMContentLoaded", function () {
     reopenBtn.classList.add("hidden");
   });
 
-  // Fake formular
+  // Fake formularhåndtering med loop og if
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.toLowerCase();
 
-    if (name && email) {
+    let alreadyRegistered = false;
+    for (let i = 0; i < registeredEmails.length; i++) {
+      if (email === registeredEmails[i]) {
+        alreadyRegistered = true;
+        break;
+      }
+    }
+
+    if (alreadyRegistered) {
+      form.innerHTML = "<p>Du er allerede tilmeldt – tjek din mail for rabatkoden!</p>";
+    } else {
       form.innerHTML = "<p>Tak for din tilmelding! Du vil få din rabatkode per mail</p>";
     }
   });
 });
-

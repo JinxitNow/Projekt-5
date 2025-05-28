@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eee;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card {
+    background: #d6c49c;
+    border-radius: 10px;
+    display: flex;
+    max-width: 1000px;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .card .text {
+    max-width: 50%;
+  }
+  
+  .card .image img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .read-more {
+    margin-top: 1rem;
+    background: #2e5d47;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .nav {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #6b8e89;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 10px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #a4c1b9;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #3f685c;
+  }
+  

@@ -14,35 +14,27 @@
   </div>
 
   <!-- Header -->
-<header class="header">
-<div class="logo">LIWIRA</div>
+  <header class="header">
+    <div class="header-top">
+  <div class="logo">LIWIRA</div>
 
-<!-- Burger-menu: vises kun på mobil -->
-  <div class="burger">
-    <img src="img/burgermenu.png" alt="Menu">
-  </div>>
+<nav class="nav-links" id="navLinks">
+  <!-- JavaScript tilføjer links her -->
+</nav>
 
+  <div class="header-icons">
+    <button title="Search"><img src="img/search.png" alt="Search" /></button>
+    <button title="Login"><img src="img/user.png" alt="Login" /></button>
+    <button title="Kurv"><img src="img/shoppingbag.png" alt="Kurv" /></button>
 
- <nav class="nav-links">
-    <a href="#">Gavekurve</a>
-    <a href="#">Sortiment</a>
-    <a href="#">Samarbejdspartnere</a>
-    <a href="#">Kontakt</a>
-  </nav>
-
-<div class="header-icons">
-  <button title="Search">
-    <img src="img/search.png" alt="Search" />
-  </button>
-  <button title="Login">
-    <img src="img/user.png" alt="Login" />
-  </button>
-  <button title="Kurv">
-    <img src="img/shoppingbag.png" alt="Kurv" />
-  </button>
+   <div class="burger" id="burgerMenu">
+      <img src="img/burgermenu.png" alt="Menu">
+  </div>
+</div>
 </div>
 
-</header>
+<script src="header.js"></script>
+  </header>
 
   <!-- Hero Section -->
 <section class="hero-section">
@@ -83,7 +75,7 @@
     </div>
   </div>
 
-  <button id="reopenPopup" class="reopen-btn hidden">20% på første køb</button>
+  <button id="reopenPopup" class="reopen-btn hidden">20% rabat</button>
 
   <script src="popup.js"></script>
 
@@ -111,7 +103,7 @@
 
     <div class="gift-card">
       <div class="gift-card__image-wrapper">
-        <img src="https://via.placeholder.com/400x300?text=Bryllup" alt="Bryllup" class="gift-card__image" />
+        <img src="img/giftbasket1.jpg" alt="Bryllup" class="gift-card__image" />
       </div>
       <p class="gift-card__label">Bryllup</p>
     </div>
@@ -127,7 +119,23 @@
   <a href="#" class="gift-section__button">SE ALLE</a>
 </section>
 
-<iframe width="1047" height="589" src="https://www.youtube.com/embed/Xw5uNle2kh8" title="LIWIRA Interview Færdig" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- Video -->
+<section class="about-video">
+  <div class="about-video__container">
+    <h2 class="about-video__headline">Hvem er LIWIRA</h2>
+    <div class="about-video__player">
+      <iframe 
+        class="about-video__iframe"
+        src="https://www.youtube.com/embed/Xw5uNle2kh8" 
+        title="YouTube video"
+        frameborder="0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
  <footer class="footer">
@@ -144,12 +152,29 @@
     </div>
 
     <div class="footer__section footer__section--aabningstider">
-      <h3 class="footer__heading">Åbningstider</h3>
+      <div class="footer__clock" onload="initClock()">
+        <h3 class="footer__heading">Åbningstider</h3>
       <p class="footer__text">Mandag–fredag<br>
       kl. 11.00–17.00<br>
       Lørdag kl. 10.00–12.00<br>
       samt efter aftale<br>
       Lukket på helligdage</p>
+  <div class="footer__clock-box">
+    <div class="footer__clock-date">
+      <div class="footer__clock-greeting">
+      <span id="åben">åben</span>
+    </div>
+      <span id="dag">Dag</span>,
+      <span id="måned">Måned</span>
+      <span id="dagnum">00</span>
+    </div>
+    <div class="footer__clock-time">
+      <span id="time">00</span>:
+      <span id="minutter">00</span>
+    </div>
+    
+  </div>
+</div>
     </div>
 
     <div class="footer__section footer__section--hjaelp">
@@ -180,9 +205,11 @@
     </div>
 
   </div>
+
+  <script src="tid.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", initClock);
+</script>
 </footer>
-
-    <script src="header.js"></script>
-
 </body>
 </html>
