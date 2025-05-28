@@ -1,40 +1,148 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karusel</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="slide.js" defer></script>
 </head>
 <body>
-  <div class="carousel-container">
-    <button class="nav left" onclick="prevSlide()">&#60;</button>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Nybro Frugt</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev Nybro Most – 100% ren æblemost fra Nybro Frugtplantage på Fyn. Mosten er koldpresset uden tilsætning og smager naturligt af de frugter, den er lavet af – lige som det står på etiketten.  
+                    </p>
+                    <p>
+                        Med fokus på kvalitet og årstidens variation bringer Nybro Most ægte smag og friskhed direkte til din bord.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="nybro" src="NybroMost.jpg" alt="">
+                </div> 
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Farm Mountain</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev Farm Mountain iskaffe – friskbryggede espressoshots med rørsukkersirup, klar til at blive blandet med mælk og is.  
+                    </p>
+                    <p>
+                        Farm Mountain støtter lokalsamfundet med projekter som solpaneler til skoler og bæredygtige komfurer, samtidig med at unge piger får mulighed for uddannelse og indkomst.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="farmmountain" src="FarmMountain.jpg" alt="">
+                </div> 
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Summerbird</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev Summerbird, der skaber økologisk chokolade af de fineste råvarer med respekt for håndværket og naturen.  
+                    </p>
+                    <p>
+                        Fra eget risteri udvikles unikke chokoladebarer og den patenterede Amber-chokolade med et helt særligt smagsunivers.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="summerbird" src="Summerbird.jpg" alt="">
+                </div> 
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Spring Copenhagen</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev Spring Copenhagen, den danske designvirksomhed, der med rødder i skandinavisk tradition skaber tidløse træfigurer og interiør til hverdagsbrug.  
+                    </p>
+                    <p>
+                        Med fokus på kvalitet, klassisk design og bæredygtighed kombinerer de gamle ikoniske former med nye kreative idéer.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="springcopenhagen" src="SpringCopenhagen.jpg" alt="">
+                </div> 
+            </div>
+        </div>
     
-    <div class="carousel-slide active">
-      <div class="card">
-        <div class="text">
-          <h2>Lena Fischer Keramik</h2>
-          <p>Oplev historien om Lena Fischer, grafikeren der fandt sin passion i at dreje lavaler til håndlavede kopper med glimtende krystalglasur.</p>
-          <p>Fra gårdliv på Hindsholm til et lille værksted fyldt med magi – hendes unika taler for sig selv.</p>
-          <button class="read-more">LÆS MERE</button>
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Lena Fischer Keramik</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev historien om Lena Fischer, grafikeren der fandt sin passion i at dreje lavaler til håndlavede kopper med glimtende krystalglasur. 
+                    </p>
+                    <p>
+                        Fra gårdliv på Hindsholm til et lille værksted fyldt med magi – hendes unika taler for sig selv.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="lena" src="LenaFischer.jpg" alt="">
+                </div> 
+            </div>
         </div>
-        <div class="image">
-          <img src="keramik.jpg" alt="Lena Fischer Keramik" />
+
+        <div class="mySlides">
+            <div class="row">
+                <div class="column left">
+                    <h2 class="overskrift">Christa Skøtt</h2>
+                    <div class="text_box">
+                    <p>
+                        Oplev historien om Christa Skøtt – den livsbekræftende sønderjyde, der maler med hjertet og naturen som sin guide. 
+                    </p>
+                    <p>
+                        Langt ude på landet, i den idylliske fynske landsby Sulkendrup, finder du Christa Skøtt – en alsidig, autodidakt kunstner, der har gjort det til sin livsvej at sætte kulør på tanker og følelser. Med sin dybe kærlighed til naturen og dens frie former lader hun sig inspirere af farver, dufte og stemninger, som hun omsætter til nærværende og sanselige malerier.
+                    </p>
+                </div>
+                    <button> Læs mere</button>
+                </div>
+                <div class="column right">
+                    <img class="christa" src="ChristiaSkøtt.jpg" alt="">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    
 
-    <button class="nav right" onclick="nextSlide()">&#62;</button>
-  </div>
-
-  <div class="dots">
-    <span class="dot active" onclick="goToSlide(0)"></span>
-    <span class="dot" onclick="goToSlide(1)"></span>
-    <span class="dot" onclick="goToSlide(2)"></span>
-    <span class="dot" onclick="goToSlide(3)"></span>
-    <span class="dot" onclick="goToSlide(4)"></span>
-  </div>
-
-  <script src="script.js"></script>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+<br>
+        <div class="dot__box">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+          </div>      
 </body>
 </html>

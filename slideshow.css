@@ -1,75 +1,158 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #eee;
-    margin: 0;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
+.slideshow-container{
+  background-color: #fff;
+ 
+}
+.row{
+  background-color: #D2C49F;
+  box-sizing: border-box;
+  border-radius: 2%;
+  margin-top: 20px;
+  margin-left: -2%;
+  margin-right: -2%;
+  height: 500px;
+}
+
+.column {
+  box-sizing: border-box;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.left {
+  width: 40%;
+}
+.overskrift{
+  margin-left: 20%;
+  font-size: 40px;
+}
+.text_box{
+  height: 260px;
+}
+.left p {
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+  margin-top: 5%;
+  font-size: 100%;
+  text-align: justify;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 200;
+ 
+}
+.left button{
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #F7F5F1;
+  background-color: #3C6255;
+  text-align: center;
+  border-radius: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.right {
+  width: 60%;
+}
+.right img {
+  margin-left: 10%;
+  margin-right: 20%;
+  border-radius: 2%;
+}
+.nybro{
+  height:440px;
+}
+
+.farmmountain{
+height:440px;
+}
+.summerbird{
+  padding-left: 80px;
+  padding-top: 70px;
+}
+
+.springcopenhagen{
+  height: 440px;
+  width: 590px;
+}
+.lena{
+  height: 450px;
+}
+
+.christa{
+  margin-top: 10px;
+  height: 430px;
+  width: 590px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #8AA499;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 250px;
+  border-radius: 10px 0 0 10px;
   
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+}
+.prev{
+  left: 250px;
+}
+
+
+
+/* Caption text */
+.text {
+  color: #040404;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-top: 10px;
+  background-color: #3C6255;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  text-align: center;
+}
+.dot__box{
+  text-align: center;
   
-  .card {
-    background: #d6c49c;
-    border-radius: 10px;
-    display: flex;
-    max-width: 1000px;
-    padding: 2rem;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .card .text {
-    max-width: 50%;
-  }
-  
-  .card .image img {
-    width: 300px;
-    border-radius: 10px;
-  }
-  
-  .read-more {
-    margin-top: 1rem;
-    background: #2e5d47;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .nav {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #6b8e89;
-    cursor: pointer;
-    margin: 0 1rem;
-  }
-  
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 10px;
-  }
-  
-  .dot {
-    height: 15px;
-    width: 15px;
-    background-color: #a4c1b9;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    background-color: #3f685c;
-  }
-  
+}
