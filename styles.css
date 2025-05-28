@@ -325,7 +325,7 @@ body {
   display: inline-block;
 }
 
-/* 💻 Desktop layout */
+/* Desktop layout */
 @media (min-width: 768px) {
   .gift-section {
     text-align: left;
@@ -356,7 +356,56 @@ body {
   }
 }
 
-/* Footer */
+
+/* ========== Video ========== */
+.about-video {
+  background-color: var(--color-background);
+  padding: 2rem 1rem;
+}
+
+.about-video__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-video__headline {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.about-video__player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.about-video__iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Desktop visning */
+@media (min-width: 768px) {
+  .about-video__headline {
+    font-size: 1.5rem;
+  }
+
+  .about-video__container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ========== Footer ========== */
 
 .footer {
   background-color: var(--color-primary);
@@ -464,7 +513,7 @@ body {
 }
 
 
-/* 💻 Desktop layout */
+/* Desktop layout */
 @media (min-width: 768px) {
   .footer__container {
     flex-direction: row;
@@ -504,8 +553,7 @@ body {
   }
 }
 
-
-/* Popup*/
+/* ========== Popup ========== */
 .popup {
   position: fixed;
   top: 0;
@@ -617,7 +665,7 @@ button[type="submit"]:hover {
   display: none;
 }
 
-/* Desktop breakpoint */
+/* Desktop visning*/
 @media (min-width: 768px) {
   .popup-content {
     flex-direction: row;
